@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
+
+/*ESCRITO (XL revisamos en 1366px en adelante)
+/*Estilos generales*/
+:root{
+--sucess: #5658c0;
+--dark: #131313;
+--primary: #7e93ee;
+--light: #eaeaea;
+--line: #6d84e9;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    min-height: 100vh;
+
+}
+a {
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    padding: 10px; z-index: 100;
+}
+.header .cont-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.header .cont-logo img {
+    height: 80px;
+    
+}
+.header .cont-logo p {
+    font-size: 35px;
+    font-family: 'Kaushan Script', cursive;
+    font-weight: bold;
+    color: var(--light);
+}
+.header .nav-bar a {
+    border: 2px solid var(--primary);
+    padding: 3px 10px;
+    border-radius: 10px;
+    color: var(--primary);
+    font-size: 20px;
+    margin-right: 10px;
+    transition: 0.5s all;
+   
+}
+
+
+.header .nav-bar a:hover {
+    background: var(--primary);
+    color: var(--light);
+    font-weight: bold;
+
+}
+.navbar-mobile {
+    display: none;
+}
+ .banner {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(
+        120deg, 
+    var(--sucess) 60%, var(--primary) 40%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+ }
+ .banner .banner-cont {
+    width: fit-content;
+ }
+ .banner .banner-cont h3 {
+    font-size: 40px;
+    color: var(--light);
+ }
+
+.banner .banner-cont h2 {
+    font-size: 80px;
+    color: var(--light);
+}
+.banner .banner-cont p {
+    color: #000000;
+    width: 600px;
+    margin-bottom: 40px;
+}
+.banner .banner-cont .btn-home{
+    background: #070ac9;
+    padding: 10px 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--light);
+    border-radius: 6px;
+    font-size: 20px;
+    border: 2px solid #070ac9;
+    transition: 0.3s;
+}
+.banner .banner-cont .btn-home:hover {
+    background: transparent;
+    color: #070ac9;
+}
+.banner-img img {
+    max-width: 850px;
+    width: 95%;
+    margin-top: 100px;
+    animation: animation-img-banner 25s linear infinite;
+    
+}
+
+/*MOVILES(Revisamos de 178px hacia abajo)*/
+@media (max-width:768px) {
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--sucess);
+}
+.header .nav-bar {
+    display: none;
+}
+.header .cont-logo p {
+    font-size: 15px;
+}
+.navbar-mobile {
+    display: block;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: var(--line);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 200;
+}
+.navbar-mobile a {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    border: 2px solid var(--sucess);
+    background: var(--sucess);
+    color: var(--light);
+    font-weight: bold;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-mobile a:hover {
+    background: var(--primary);
+    color: var(--light);
+}
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+    height: 100%;
+    overflow: hidden;
+}
+.banner .banner-cont h3 {
+    font-size: 30px;
+    margin-top: 30px;
+}
+.banner .banner-cont h2{
+    font-size: 50px;
+}
+.banner p {
+    width: auto;
+}
+.banner .banner-cont {
+    width: 100%;
+    padding: 20px;
+}
+.banner .banner-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
+@keyframes animation-img-banner {
+    100%{
+        transform: rotate(360deg);
+    }
+}
